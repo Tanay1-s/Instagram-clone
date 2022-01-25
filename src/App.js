@@ -1,25 +1,33 @@
 import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Classes from './App.module.css';
+import {Form} from './Form';
+import {Photo} from './Photo';
+import {Photo1} from './Photo1';
+import {Photo2} from './Photo2';
+import {Footer} from './Footer';
 
-function App() {
+class App extends React.Component {
+  
+  render() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div className={Classes.maind}>
+       <div1 className={Classes.photo}>
+        <Photo/>
+        <Photo1/>
+
+       </div1>
+       <div2 className={Classes.otdetails}>
+         <Form/> 
+       </div2>
+    </div>
+    <div className={Classes.footer}>
+          <Footer/>
+    </div>
     </div>
   );
+}
 }
 
 export default App;
